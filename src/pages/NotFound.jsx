@@ -1,17 +1,13 @@
 import { Link } from "react-router-dom";
 
-const About = () => {
-
-
-
+const NotFound = () => {
     return (
         <div>
-        <h1>About</h1>
-        <p>Welcome to the About page</p>
+        <h1>NotFound</h1>
+        <p>Welcome to the NotFound page</p>
         <Link to='/'>Home</Link>
-
         </div>
     )
 }
 
-export default About;
+export default NotFound;
