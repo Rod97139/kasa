@@ -25,15 +25,11 @@ const Details = (props) => {
                         <div>
                             <p>{data.rating}</p>
                         </div>
-
                     </div>
                     <div>
                         <DropDown title="Description" content={data.description}/>
                         <DropDown title="Equipements" content={data.equipments}/>
                     </div>
-
-
-
                 </div>
             </article>
         </section>
