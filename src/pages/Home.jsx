@@ -1,31 +1,24 @@
 import { Link } from "react-router-dom";
-// import {useFetch} from "../utils/hooks.js";
-// import {useEffect, useState} from "react";
-// import axios from "axios";
-
-const Home = (data) => {
-
-
-    data.data.data && console.log(2, data.data.data)
-
-
+import Card from "../components/pages/home/Card.jsx";
+// eslint-disable-next-line react/prop-types
+const Home = ({ data }) => {
     return (
-        <div>
-            <h1>Home</h1>
-            <Link to='/about'>About</Link>
-            <div>
-                {data.data.data && (data.data.data).map((logement, index) => {
+        <main>
+            <section>
+                {/* eslint-disable-next-line react/prop-types */}
+                {data && data.map((lodging) => {
                     return (
-                        <div key={index}>
-                           <h2>{logement.title}</h2>
-                            <p>{logement.description}</p>
-                            <p>{logement.price}</p>
-                        </div>
+                        <article key={lodging.id}>
+                            <Link to={`/details/${lodging.id}`} key={lodging.id}>
+                                <Card title={lodging.title} description={lodging.description} image={lodging.cover}/>
+                            </Link>
+                        </article>
                     )
                 })}
-            </div>
+            </section>
             <p>Welcome to the Home page</p>
-        </div>
+        </main>
+
     )
 }
 
