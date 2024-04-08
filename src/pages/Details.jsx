@@ -2,8 +2,7 @@ import {useParams} from "react-router-dom";
 
 const Details = (props) => {
     const {lodgingId} = useParams();
-    const data = props.data && props.data.find(lodging => lodging.id === lodgingId)
-    console.log(123, data)
+    const data = props.data.find(lodging => lodging.id === lodgingId);
 
     return (
         <div>

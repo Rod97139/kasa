@@ -10,12 +10,15 @@ import {
     Outlet,
 } from 'react-router-dom';
 
-const Router = ({ fetchData }) => {
-
+const Router = ({fetchData}) => {
     const AppLayout = () => (
         <>
             <Header />
-            <Outlet />
+            { fetchData.isLoading ? (
+                <div>Loading...</div>
+            ) : (
+                <Outlet />
+            )}
             <Footer />
         </>
     );

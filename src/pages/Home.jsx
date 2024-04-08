@@ -4,7 +4,7 @@ const Home = ({ data }) => {
     return (
         <main>
             <section>
-                {data && data.map((lodging) => {
+                { data.map((lodging) => {
                     return (
                         <article key={lodging.id}>
                             <Link to={`/details/${lodging.id}`}>
