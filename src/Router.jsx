@@ -10,7 +10,6 @@ import {
     Outlet,
 } from 'react-router-dom';
 
-// eslint-disable-next-line react/prop-types
 const Router = ({ fetchData }) => {
 
     const AppLayout = () => (
@@ -29,7 +28,6 @@ const Router = ({ fetchData }) => {
 
         {
             path: "/",
-            // eslint-disable-next-line react/prop-types
             element: <Home data={fetchData.data}/>,
         },
         {
@@ -38,7 +36,7 @@ const Router = ({ fetchData }) => {
         },
         {
             path: "/details/:lodgingId",
-            element: <Details/>,
+            element: <Details data={fetchData.data}/>,
         },
         {
             path: "*",
