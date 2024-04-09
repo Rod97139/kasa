@@ -27,9 +27,6 @@ const About = () => {
     ];
 
 
-
-
-
     return (
         <main>
             {dropdownData.map((dropdown, index) => (

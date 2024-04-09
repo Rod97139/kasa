@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
 import Card from "../components/pages/home/Card.jsx";
+import '../styles/pages/home/Home.scss';
 const Home = ({ data }) => {
     return (
         <main>
-            <section>
+            <section className="home-card-container">
                 { data.map((lodging) => {
                     return (
                         <article key={lodging.id}>
