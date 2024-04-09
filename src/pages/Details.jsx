@@ -3,34 +3,33 @@ import Carrousel from "../components/pages/details/Carrousel.jsx";
 import DropDown from "../components/DropDown.jsx";
 import NotFound from "./NotFound.jsx";
 
-const Details = (props) => {
+const Details = ({data}) => {
     const {lodgingId} = useParams();
-    const data = props.data.find(lodging => lodging.id === lodgingId); // return an object or undefined
-    if (!data) return <NotFound/>
-
+    const lodging = data.find(lodging => lodging.id === lodgingId); // return an object or undefined
+    if (!lodging) return <NotFound/>
 
     return (
         <section>
             <article>
-                <Carrousel images={data.pictures}/>
+                <Carrousel images={lodging.pictures}/>
                 <div>
                     <div>
-                        <h1>{data.title}</h1>
-                        <p>{data.location}</p>
-                        <p>{data.tags.map(tag => <span key={tag}>{tag}</span>)}</p>
+                        <h1>{lodging.title}</h1>
+                        <p>{lodging.location}</p>
+                        <p>{lodging.tags.map(tag => <span key={tag}>{tag}</span>)}</p>
                     </div>
                     <div>
                         <div>
-                            <p>{data.host.name}</p>
-                            <img src={data.host.picture} alt={data.host.name}/>
+                            <p>{lodging.host.name}</p>
+                            <img src={lodging.host.picture} alt={lodging.host.name}/>
                         </div>
                         <div>
-                            <p>{data.rating}</p>
+                            <p>{lodging.rating}</p>
                         </div>
                     </div>
                     <div>
-                        <DropDown title="Description" content={data.description}/>
-                        <DropDown title="Equipements" content={data.equipments}/>
+                        <DropDown title="Description" content={lodging.description}/>
+                        <DropDown title="Equipements" content={lodging.equipments}/>
                     </div>
                 </div>
             </article>
