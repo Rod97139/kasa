@@ -1,11 +1,13 @@
 import {useParams} from "react-router-dom";
 import Carrousel from "../components/pages/details/Carrousel.jsx";
 import DropDown from "../components/DropDown.jsx";
+import NotFound from "./NotFound.jsx";
 
 const Details = (props) => {
     const {lodgingId} = useParams();
-    const data = props.data.find(lodging => lodging.id === lodgingId);
-    console.log(data)
+    const data = props.data.find(lodging => lodging.id === lodgingId); // return an object or undefined
+    if (!data) return <NotFound/>
+
 
     return (
         <section>
