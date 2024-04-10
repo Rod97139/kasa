@@ -3,8 +3,8 @@ import Card from "../components/pages/home/Card.jsx";
 import '../styles/pages/home/Home.scss';
 const Home = ({ data }) => {
     return (
-        <main>
-            <section className="home-card-container">
+        <main className="home-container">
+            <section className="home-card-wrapper">
                 { data.map((lodging) => {
                     return (
                         <article key={lodging.id}>

@@ -28,7 +28,7 @@ const About = () => {
 
 
     return (
-        <main>
+        <main className="container">
             {dropdownData.map((dropdown, index) => (
                 <DropDown key={index} title={dropdown.title} content={dropdown.content} />
             ))}

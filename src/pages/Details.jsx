@@ -2,6 +2,7 @@ import {useParams} from "react-router-dom";
 import Carrousel from "../components/pages/details/Carrousel.jsx";
 import DropDown from "../components/DropDown.jsx";
 import NotFound from "./NotFound.jsx";
+import Rating from "../components/pages/details/Rating.jsx";
 
 const Details = ({data}) => {
     const {lodgingId} = useParams();
@@ -9,6 +10,7 @@ const Details = ({data}) => {
     if (!lodging) return <NotFound/>
 
     return (
+    <main className="container">
         <section>
             <article>
                 <Carrousel images={lodging.pictures}/>
@@ -24,7 +26,8 @@ const Details = ({data}) => {
                             <img src={lodging.host.picture} alt={lodging.host.name}/>
                         </div>
                         <div>
-                            <p>{lodging.rating}</p>
+                            <Rating rating={parseInt(lodging.rating)}/>
+                            {/* <p>{lodging.rating}</p> */}
                         </div>
                     </div>
                     <div>
@@ -34,6 +37,7 @@ const Details = ({data}) => {
                 </div>
             </article>
         </section>
+    </main>
     );
 }
 
