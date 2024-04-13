@@ -9,13 +9,14 @@ import {
     RouterProvider,
     Outlet,
 } from 'react-router-dom';
+import Loader from "./components/Loader.jsx";
 
 const Router = ({fetchData}) => {
     const AppLayout = () => (
         <>
             <Header />
             { fetchData.isLoading ? (
-                <div>Loading...</div>
+                <Loader />
             ) : (
                 <Outlet />
             )}
