@@ -1,7 +1,28 @@
 .header {
+  margin: auto;
+  max-width: 1200px;
   &-nav {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+    &-logo {
+      scale: 0.7;
+    }
+    &-text-home {
+      margin-inline: 15px;
+      text-decoration: none;
+      color: black;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    &-text-about {
+      margin-inline: 15px;
+      text-decoration: none;
+      color: black;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 }

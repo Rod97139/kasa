@@ -1,0 +1,19 @@
+.banner {
+
+    margin-bottom: 20px;
+    border-radius: 20px;
+    overflow: hidden;
+    height: 150px;
+    width: 95%;
+    max-width: 1200px;
+    margin-inline: auto;
+
+    &-img {
+
+      object-fit: cover;
+      width: 1200px;
+      border-radius: 5px;
+      position: relative;
+      bottom: 500px;
+    }
+}

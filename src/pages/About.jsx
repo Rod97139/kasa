@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import DropDown from "../components/DropDown.jsx";
+import Banner from "../components/Banner.jsx";
 
 const About = () => {
 
@@ -29,9 +30,14 @@ const About = () => {
 
     return (
         <main className="container">
+            <Banner/>
+            <section>
+                <article>
             {dropdownData.map((dropdown, index) => (
                 <DropDown key={index} title={dropdown.title} content={dropdown.content} />
             ))}
+                </article>
+            </section>
         <h1>About</h1>
         <p>Welcome to the About page</p>
         <Link to='/'>Home</Link>

@@ -1,5 +1,6 @@
 import emptyStar from '../../../assets/icons/emptyStar.svg';
 import fullStar from '../../../assets/icons/fullStar.svg';
+import '../../../styles/pages/details/Rating.scss'
 
 const Rating = ({ rating }) => {
     const emptyStarsNb = 5 - rating;

@@ -3,6 +3,7 @@ import Carrousel from "../components/pages/details/Carrousel.jsx";
 import DropDown from "../components/DropDown.jsx";
 import NotFound from "./NotFound.jsx";
 import Rating from "../components/pages/details/Rating.jsx";
+import "../styles/pages/details/Details.scss";
 
 const Details = ({data}) => {
     const {lodgingId} = useParams();
@@ -12,28 +13,27 @@ const Details = ({data}) => {
     return (
     <main className="container">
         <section>
+            <Carrousel images={lodging.pictures}/>
             <article>
-                <Carrousel images={lodging.pictures}/>
-                <div>
-                    <div>
-                        <h1>{lodging.title}</h1>
-                        <p>{lodging.location}</p>
-                        <p>{lodging.tags.map(tag => <span key={tag}>{tag}</span>)}</p>
+                <div className="details">
+                    <div className="details-lodging">
+                        <h1 className='details-lodging-title'>{lodging.title}</h1>
+                        <p className='details-lodging-location'>{lodging.location}</p>
+                        <p className='details-lodging-tags'>{lodging.tags.map(tag => <span key={tag}>{tag}</span>)}</p>
                     </div>
-                    <div>
-                        <div>
-                            <p>{lodging.host.name}</p>
-                            <img src={lodging.host.picture} alt={lodging.host.name}/>
+                    <div className='details-owner'>
+                        <div className='details-owner-profile'>
+                            <p className="details-owner-profile-name">{lodging.host.name}</p>
+                            <img className='details-owner-profile-picture' src={lodging.host.picture} alt={lodging.host.name}/>
                         </div>
-                        <div>
+                        <div className='details-owner-rating'>
                             <Rating rating={parseInt(lodging.rating)}/>
-                            {/* <p>{lodging.rating}</p> */}
                         </div>
                     </div>
-                    <div>
-                        <DropDown title="Description" content={lodging.description}/>
-                        <DropDown title="Equipements" content={lodging.equipments}/>
-                    </div>
+                </div>
+                <div className='dropdown'>
+                    <DropDown title="Description" content={lodging.description}/>
+                    <DropDown title="Equipements" content={lodging.equipments}/>
                 </div>
             </article>
         </section>

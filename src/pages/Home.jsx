@@ -1,9 +1,11 @@
 import { Link } from "react-router-dom";
 import Card from "../components/pages/home/Card.jsx";
 import '../styles/pages/home/Home.scss';
+import Banner from "../components/Banner.jsx";
 const Home = ({ data }) => {
     return (
         <main className="home-container">
+            <Banner page='home'/>
             <section className="home-card-wrapper">
                 { data.map((lodging) => {
                     return (
@@ -15,7 +17,6 @@ const Home = ({ data }) => {
                     )
                 })}
             </section>
-            <p>Welcome to the Home page</p>
         </main>
 
     )

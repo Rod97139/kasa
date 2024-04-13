@@ -1,4 +1,7 @@
 import {useState} from "react";
+import arrowRight from "../../../assets/icons/arrow-right.svg";
+import arrowLeft from "../../../assets/icons/arrow-left.svg";
+import "../../../styles/components/Carrousel.scss";
 
 const Carrousel = ({ images }) => {
   const [index, setIndex] = useState(0);
@@ -13,9 +16,9 @@ const Carrousel = ({ images }) => {
 
   return (
     <div className="carrousel">
-      <button onClick={handlePrev}>Prev</button>
-      <img src={images[index]} alt="carrousel" />
-      <button onClick={handleNext}>Next</button>
+      <img className="carrousel-img" src={images[index]} alt="carrousel" />
+        <img className='carrousel-arrow-left' src={arrowLeft} onClick={handlePrev} alt='arrow-left'/>
+        <img className='carrousel-arrow-right' src={arrowRight} onClick={handleNext} alt='arrow-right'/>
     </div>
   );
 }

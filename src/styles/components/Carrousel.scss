@@ -1,0 +1,33 @@
+.carrousel {
+  position: relative;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  overflow: hidden;
+  height: 500px;
+  width: 95%;
+  max-width: 1200px;
+  margin-inline: auto;
+  &-img {
+    object-fit: cover;
+    width: 1200px;
+    height: 100%;
+    border-radius: 20px;
+  }
+  &-arrow-left {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 10;
+  }
+    &-arrow-right {
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        transform: translateY(-50%);
+        cursor: pointer;
+        z-index: 10;
+    }
+
+}
