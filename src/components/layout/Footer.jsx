@@ -1,7 +1,11 @@
+import logo from '../../assets/icons/logo-white.svg';
+import '../../styles/layout/Footer.scss'
+
 const Footer = () => {
     return (
         <footer>
-        <p>© 2024 My Company</p>
+            <img src={logo} alt="kasa logo"/>
+            <p>© 2024 Kasa. All rights reserved</p>
         </footer>
     );
 }

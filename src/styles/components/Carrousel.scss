@@ -13,6 +13,13 @@
     height: 100%;
     border-radius: 20px;
   }
+  &-index {
+    color: white;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-inline: auto;
+  }
   &-arrow-left {
     position: absolute;
     top: 50%;

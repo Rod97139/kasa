@@ -1,0 +1,20 @@
+.container-notfound {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 78vh;
+  width: 100%;
+  color: #ff6060;
+  h1 {
+    font-size: 10rem;
+    margin-block: 0;
+  }
+  p {
+    font-size: 2rem;
+    margin-top: 0;
+  }
+  a {
+    color: black;
+  }
+}

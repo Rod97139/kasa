@@ -15,11 +15,7 @@ const Router = ({fetchData}) => {
     const AppLayout = () => (
         <>
             <Header />
-            { fetchData.isLoading ? (
-                <Loader />
-            ) : (
-                <Outlet />
-            )}
+            {fetchData.isLoading ? (<Loader />) : (<Outlet />)}
             <Footer />
         </>
     );
