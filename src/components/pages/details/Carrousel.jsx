@@ -14,11 +14,15 @@ const Carrousel = ({ images }) => {
     setIndex((index - 1 + images.length) % images.length);
   };
 
+  const isThereOnlyOneImage = () => {
+    if (images.length === 1) return {display: 'none'}
+  }
+
   return (
     <div className="carrousel">
       <img className="carrousel-img" src={images[index]} alt="carrousel" />
-        <img className='carrousel-arrow-left' src={arrowLeft} onClick={handlePrev} alt='arrow-left'/>
-        <img className='carrousel-arrow-right' src={arrowRight} onClick={handleNext} alt='arrow-right'/>
+        <img className='carrousel-arrow-left' style={isThereOnlyOneImage()} src={arrowLeft} onClick={handlePrev} alt='arrow-left'/>
+        <img className='carrousel-arrow-right' style={isThereOnlyOneImage()} src={arrowRight} onClick={handleNext} alt='arrow-right'/>
       <p className="carrousel-index">{index+1}/{images.length}</p>
     </div>
   );
