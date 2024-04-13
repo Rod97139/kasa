@@ -1,5 +1,5 @@
-import bannerHome from '../../public/banner1.png'
-import bannerAbout from '../../public/banner2.png'
+import bannerHome from '../assets/images/banner1.png'
+import bannerAbout from '../assets/images/banner2.png'
 import '../styles/components/Banner.scss';
 
 const Banner = ({page}) => {
