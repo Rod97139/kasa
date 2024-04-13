@@ -1,0 +1,16 @@
+details {
+  margin: 1rem;
+  summary {
+      list-style: none;
+      cursor: pointer;
+      background: #FF6060;
+    &::after {
+      content: url("../../assets/icons/arrow-down.svg");
+      float: right;
+    }
+
+     }
+  div {
+      background: #F6F6F6;
+  }
+}

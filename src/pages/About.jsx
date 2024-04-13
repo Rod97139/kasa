@@ -38,10 +38,6 @@ const About = () => {
             ))}
                 </article>
             </section>
-        <h1>About</h1>
-        <p>Welcome to the About page</p>
-        <Link to='/'>Home</Link>
-
         </main>
     )
 }

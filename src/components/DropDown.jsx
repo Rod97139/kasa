@@ -1,3 +1,5 @@
+import '../styles/components/DropDown.scss';
+
 const DropDown = ({ title, content }) => {
 
 
