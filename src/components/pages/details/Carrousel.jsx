@@ -18,11 +18,13 @@ const Carrousel = ({ images }) => {
     if (images.length === 1) return {display: 'none'}
   }
 
+  const arrowShouldDisplay = isThereOnlyOneImage();
+
   return (
     <div className="carrousel">
       <img className="carrousel-img" src={images[index]} alt="carrousel" />
-        <img className='carrousel-arrow-left' style={isThereOnlyOneImage()} src={arrowLeft} onClick={handlePrev} alt='arrow-left'/>
-        <img className='carrousel-arrow-right' style={isThereOnlyOneImage()} src={arrowRight} onClick={handleNext} alt='arrow-right'/>
+        <img className='carrousel-arrow-left' style={arrowShouldDisplay} src={arrowLeft} onClick={handlePrev} alt='arrow-left'/>
+        <img className='carrousel-arrow-right' style={arrowShouldDisplay} src={arrowRight} onClick={handleNext} alt='arrow-right'/>
       <p className="carrousel-index">{index+1}/{images.length}</p>
     </div>
   );
