@@ -7,7 +7,7 @@ import "../styles/pages/details/Details.scss";
 
 const Details = ({data}) => {
     const {lodgingId} = useParams();
-    const lodging = data.find(lodging => lodging.id === lodgingId); // return an object or undefined
+    const lodging = data && data.find(lodging => lodging.id === lodgingId); // return an object or undefined
     if (!lodging) return <NotFound/>
 
     return (

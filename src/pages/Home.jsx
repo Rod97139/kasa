@@ -7,7 +7,7 @@ const Home = ({ data }) => {
         <main className="home-container">
             <Banner page='home'/>
             <section className="home-card-wrapper">
-                { data.map((lodging) => {
+                {data && data.map((lodging) => {
                     return (
                         <article key={lodging.id}>
                             <Link to={`/details/${lodging.id}`} style={{textDecoration : 'none'}}>
