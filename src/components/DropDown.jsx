@@ -7,7 +7,9 @@ const DropDown = ({ title, content }) => {
         <details>
             <summary>{title}</summary>
             <div>
-                {Array.isArray(content) ? content.map((item, index) => <p key={index}>{item}</p>) : <p>{content}</p>}
+                <p>
+                {Array.isArray(content) ? content.map((item, index) => <span key={index}>{item}</span>) : <span>{content}</span>}
+                </p>
             </div>
         </details>
     )
