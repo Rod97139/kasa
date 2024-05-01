@@ -6,6 +6,7 @@ const Banner = ({page}) => {
   return (
     <div className="banner">
       <img className='banner-img' src={page === "home" ? bannerHome : bannerAbout} alt='côte rocheuse'/>
+      {page === "home" && <h1 className='banner-title'>Chez vous, partout et ailleurs</h1>}
     </div>
   );
 }
