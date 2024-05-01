@@ -1,0 +1,13 @@
+.dropdown-about-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-inline: 50px;
+
+    details {
+        width: 100%;
+        max-width: 1000px
+    }
+
+}

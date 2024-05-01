@@ -2,6 +2,7 @@ article {
   margin: auto;
   max-width: 1200px;
   .details {
+    margin: 1rem;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -54,6 +55,25 @@ article {
       }
       &-rating {
         text-align: center;
+        @media (max-width: 767.98px) {
+          float: left;
+          img {
+
+            width: 4vw;
+            height: 4vw;
+
+          }
+        }
+        
+      }
+    }
+    @media (max-width: 767.98px) {
+      flex-direction: column;
+      align-items: center;
+      .details-owner {
+        width: 100%;
+        flex-direction: row-reverse;
+        justify-content: space-around;
       }
     }
   }
@@ -61,7 +81,14 @@ article {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    align-items: center;
     margin-block: 1rem;
+      @media (max-width: 767.98px) {
+        flex-direction: column;
+        align-items: center;
+        margin-inline: 1rem;
+      }
+    details {
+     width: 100%;
+    }
   }
 }

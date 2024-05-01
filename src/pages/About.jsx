@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import DropDown from "../components/DropDown.jsx";
 import Banner from "../components/Banner.jsx";
+import "../styles/pages/about/About.scss";
 
 const About = () => {
 
@@ -32,7 +33,7 @@ const About = () => {
         <main className="container">
             <Banner/>
             <section>
-                <article>
+                <article className="dropdown-about-container">
             {dropdownData.map((dropdown, index) => (
                 <DropDown key={index} title={dropdown.title} content={dropdown.content} />
             ))}

@@ -1,9 +1,15 @@
 details {
   margin: 1rem;
+
   summary {
+    
       list-style: none;
       cursor: pointer;
       background: #FF6060;
+      padding: 8px;
+      border-radius: 5px;
+      
+      color: white;
     &::after {
       content: url("../../assets/icons/arrow-down.svg");
       float: right;
@@ -12,5 +18,8 @@ details {
      }
   div {
       background: #F6F6F6;
+      width: 100%;
+      position: relative;
+      top: -15px;
   }
 }
