@@ -27,15 +27,15 @@ const Router = ({fetchData}) => {
         children: [
 
         {
-            path: "/",
+            path: "/kasa/",
             element: <Home data={fetchData.data}/>,
         },
         {
-            path: "/about",
+            path: "/kasa/about",
             element: <About/>,
         },
         {
-            path: "/details/:lodgingId",
+            path: "/kasa/details/:lodgingId",
             element: <Details data={fetchData.data}/>,
         },
         {

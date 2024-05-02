@@ -8,7 +8,7 @@ const NotFound = () => {
             {/* eslint-disable-next-line react/no-unescaped-entities */}
         <p>Oups! La page que vous demandez n'existe pas.</p>
 
-        <Link to='/'>Retourner sur la page d’accueil</Link>
+        <Link to='/kasa/'>Retourner sur la page d’accueil</Link>
         </div>
     )
 }

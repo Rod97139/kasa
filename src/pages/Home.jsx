@@ -10,7 +10,7 @@ const Home = ({ data }) => {
                 {data && data.map((lodging) => {
                     return (
                         <article key={lodging.id}>
-                            <Link to={`/details/${lodging.id}`} style={{textDecoration : 'none'}}>
+                            <Link to={`/kasa/details/${lodging.id}`} style={{textDecoration : 'none'}}>
                                 <Card title={lodging.title} description={lodging.description} image={lodging.cover}/>
                             </Link>
                         </article>
