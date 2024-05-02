@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import DropDown from "../components/DropDown.jsx";
 import Banner from "../components/Banner.jsx";
 import "../styles/pages/about/About.scss";
