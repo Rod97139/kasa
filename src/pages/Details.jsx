@@ -4,10 +4,11 @@ import DropDown from "../components/DropDown.jsx";
 import NotFound from "./NotFound.jsx";
 import Rating from "../components/pages/details/Rating.jsx";
 import "../styles/pages/details/Details.scss";
+import apiData from '../data/logements.json';
 
 const Details = ({data}) => {
     const {lodgingId} = useParams();
-    const lodging = data && data.find(lodging => lodging.id === lodgingId); // return an object or undefined
+    const lodging = apiData && apiData.find(lodging => lodging.id === lodgingId); // return an object or undefined
     if (!lodging) return <NotFound/>
 
     return (
