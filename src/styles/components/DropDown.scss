@@ -10,8 +10,6 @@ details {
   margin: 1rem;
 
   summary {
-    
-      list-style: none;
       cursor: pointer;
       background: #FF6060;
       padding: 8px;
@@ -22,9 +20,13 @@ details {
       justify-content: space-between;
       align-items: center;
       font-size: 1.2rem;
+    &::-webkit-details-marker {
+      display: none;
+    }
     &::after {
       content: url("../../assets/icons/arrow-up.svg");
       transition: transform 0.2s ease-in-out;
+      -webkit-transition: transform 0.3s ease;
       float: right;
       margin-right: 5px;
     }
