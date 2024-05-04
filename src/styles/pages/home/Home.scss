@@ -1,9 +1,9 @@
 .home-card-wrapper {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
       gap: 1rem;
       justify-content: center;
-      padding: 1rem;
+      // padding: 1rem;
       margin: 0 auto;
       max-width: 1200px;
       width: 100%;
@@ -11,8 +11,13 @@
       border-radius: 20px;
       box-sizing: border-box;
 
-      article {
-            display: flex;
-            justify-content: center;
+    
+}
+
+@media screen and (max-width: 460px){
+      .home-card-wrapper {
+            background: none;
+            gap: 0;
       }
-    }
+}
+
