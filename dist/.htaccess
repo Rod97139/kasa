@@ -1,0 +1,10 @@
+RewriteEngine On
+    RewriteBase /kasa/
+
+    # Ne rien faire si la requête correspond à index.html
+    RewriteRule ^index\.html$ - [L]
+
+    # Rediriger toutes les autres requêtes vers index.html
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule . /kasa/index.html [L]
