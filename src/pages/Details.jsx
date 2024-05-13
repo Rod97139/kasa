@@ -14,7 +14,7 @@ const Details = ({data}) => {
     <main className="container">
         <section>
             <Carrousel images={lodging.pictures}/>
-            <article>
+            <article className="details-container">
                 <div className="details">
                     <div className="details-lodging">
                         <h1 className='details-lodging-title'>{lodging.title}</h1>
