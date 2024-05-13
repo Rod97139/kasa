@@ -1,6 +1,6 @@
-article {
+.details-container {
+  width: 96%;
   margin: auto;
-  max-width: 1200px;
   .details {
     margin: 1rem;
     display: flex;
@@ -54,7 +54,6 @@ article {
           width: 100px;
           height: 100px;
           border-radius: 50%;
-          margin-right: 1rem;
           @media (max-width: 767.98px) {
             width: 10vw;
             height: 10vw;

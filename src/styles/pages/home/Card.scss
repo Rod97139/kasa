@@ -5,7 +5,6 @@
   align-items: center;
   border-radius: 0.5rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
   width: 300px;
   height: 300px;
   position: relative;
@@ -34,8 +33,8 @@
     align-self: center;
     margin: auto;
   }
-  @media (max-width: 359.98px) {
-    width: 80vw;
-    height: 80vw;
+  @media (max-width: 450.98px) {
+    width: 92vw;
+    height: 92vw;
   }
 }

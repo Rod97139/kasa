@@ -1,27 +1,59 @@
 .header {
   margin: auto;
-  max-width: 1200px;
   &-nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     &-logo {
       scale: 0.7;
-    }
-    &-text-home {
-      margin-inline: 15px;
-      text-decoration: none;
-      color: black;
-      &:hover {
-        text-decoration: underline;
+      @media screen and (max-width: 768px){
+        position: relative;
+        scale: 0.5;
+        right: 20px;
       }
     }
-    &-text-about {
+    &-text-home {
+      text-transform: uppercase;
       margin-inline: 15px;
       text-decoration: none;
       color: black;
-      &:hover {
-        text-decoration: underline;
+    }
+    &-text-about {
+      text-transform: uppercase;
+      margin-inline: 30px;
+      text-decoration: none;
+      color: black;
+    }
+    .active {
+      text-decoration: underline;
+    }
+    @media screen and (max-width: 768px){
+      &-text{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        &-home {
+          position: relative;
+          right: 25px;
+          margin-inline: 5px;
+          font-size: 0.78rem;
+        }
+        &-about {
+          position: relative;
+          right: 10px;
+          width: 54px;
+          margin-left: 5px;
+          font-size: 0.78rem;
+          white-space: nowrap;
+        }
+        @media screen and (max-width: 340px){
+          &-home {
+          right: 50px;
+          }
+          &-about {
+          right: 50px;
+          }
+        }
       }
     }
   }

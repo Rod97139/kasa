@@ -1,41 +1,63 @@
 details {
-  &[open=""] {
-    summary {
-      &::after {
-        content: url("../../assets/icons/arrow-up.svg");
-      }
+  @keyframes expandDropdown {
+    from {
+        max-height: 0;
+    }
+    to {
+        max-height: 300px;
     }
   }
   margin: 1rem;
 
   summary {
-    
-      list-style: none;
       cursor: pointer;
       background: #FF6060;
       padding: 8px;
       border-radius: 5px;
-      
+      height: 2rem;
       color: white;
-    &::after {
-      content: url("../../assets/icons/arrow-down.svg");
-      float: right;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 1.2rem;
+    &::-webkit-details-marker {
+      display: none;
     }
-
-     }
+    &::after {
+      content: url("../../assets/icons/arrow-up.svg");
+      transition: transform 0.2s ease-in-out;
+      -webkit-transition: transform 0.3s ease;
+      float: right;
+      margin-right: 5px;
+    }
+  }
   div {
+      overflow: hidden;
       background: #F6F6F6;
       width: 100%;
       position: relative;
-      top: -15.8px;
-      border-radius: 0 0 5px 5px ;
+      border-radius: 0 0 5px 5px;
       p {
         padding: 1rem;
+        padding-bottom: 0;
+        margin-bottom: 0;
+        position: relative;
         display: flex;
+        top: -15px;
         flex-direction: column;
         span {
-          margin: 0.2rem;
+          line-height: 1.5;
         }
       }
+  }
+  &[open=""] {
+    summary {
+      &::after {
+        transform: rotate(-180deg);
+      }
+    }
+    div {
+      animation: expandDropdown 0.8s forwards; 
+    }
   }
 }
