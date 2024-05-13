@@ -21,30 +21,34 @@ const Router = ({fetchData}) => {
     );
 
 
-    const router = createBrowserRouter([
-        {
-        element: <AppLayout />,
-        children: [
+    const router = createBrowserRouter(
+        [{
+            element: <AppLayout />,
+            children: [
 
+                {
+                    path: "/",
+                    element: <Home data={fetchData.data}/>,
+                },
+                {
+                    path: "/about",
+                    element: <About/>,
+                },
+                {
+                    path: "/details/:lodgingId",
+                    element: <Details data={fetchData.data}/>,
+                },
+                {
+                    path: "*",
+                    element: <NotFound/>,
+                },
+            ]
+        }],
         {
-            path: "/kasa/",
-            element: <Home data={fetchData.data}/>,
-        },
-        {
-            path: "/kasa/about",
-            element: <About/>,
-        },
-        {
-            path: "/kasa/details/:lodgingId",
-            element: <Details data={fetchData.data}/>,
-        },
-        {
-            path: "*",
-            element: <NotFound/>,
-        },
-        ]
-    },
-    ]);
+            basename: "/kasa",
+        }
+
+    );
 
     return (
         <RouterProvider router={router} />

@@ -13,7 +13,7 @@ const Home = ({ data }) => {
                 {apiData && apiData.map((lodging) => {
                     return (
                         <article key={lodging.id}>
-                            <Link to={`/kasa/details/${lodging.id}`} style={{textDecoration : 'none'}}>
+                            <Link to={`/details/${lodging.id}`} style={{textDecoration : 'none'}}>
                                 <Card title={lodging.title} description={lodging.description} image={lodging.cover}/>
                             </Link>
                         </article>
