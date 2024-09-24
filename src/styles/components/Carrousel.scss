@@ -4,8 +4,10 @@
   border-radius: 20px;
   overflow: hidden;
   height: 500px;
-  width: 95%;
-  margin-inline: auto;
+  // width: 60%;
+  margin-inline: 1rem;
+  height: 30vw;
+  min-height: 150px;
   &-img {
     object-fit: cover;
     width: 100%;
@@ -26,14 +28,25 @@
     transform: translateY(-50%);
     cursor: pointer;
     z-index: 10;
+    height: 4vw;
+    @media screen and (max-width: 768px){
+      height: 6vw;
+      
+    }
   }
     &-arrow-right {
+        height: 4vw;
         position: absolute;
         top: 50%;
         right: 20px;
         transform: translateY(-50%);
         cursor: pointer;
         z-index: 10;
+        
+    @media screen and (max-width: 768px){
+      height: 6vw;
+      
+    }
     }
 
 }
