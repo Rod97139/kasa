@@ -11,12 +11,24 @@
     height: 50vw;
   }
   min-height: 150px;
-  &-img {
-    object-fit: cover;
+  &-slide-container {
+    display: flex;
     width: 100%;
+    transition: transform 0.5s ease-in-out;
     height: 100%;
-    border-radius: 20px;
+    flex-wrap: nowrap;
+    & > .carrousel-img {
+      object-fit: cover;
+      width: 100%;
+      flex: 0 0 100%;
+    }
   }
+  // &-img {
+  //   object-fit: cover;
+  //   width: 100%;
+  //   height: 100%;
+  //   border-radius: 20px;
+  // }
   &-index {
     color: white;
     position: absolute;
