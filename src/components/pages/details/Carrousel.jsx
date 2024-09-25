@@ -24,7 +24,6 @@ const Carrousel = ({ images }) => {
     <div className="carrousel">
       <div className="carrousel-slide-container"
       style={{transform: `translateX(-${index * 100}%)`}}
-      
       >
       {images.map((image, i) => (
         <img

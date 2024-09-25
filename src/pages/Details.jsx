@@ -1,6 +1,6 @@
 import {useParams} from "react-router-dom";
 import Carrousel from "../components/pages/details/Carrousel.jsx";
-import DropDown from "../components/DropDown.jsx";
+import DropDownV2 from "../components/DropDownV2.jsx";
 import NotFound from "./NotFound.jsx";
 import Rating from "../components/pages/details/Rating.jsx";
 import "../styles/pages/details/Details.scss";
@@ -32,8 +32,8 @@ const Details = ({data}) => {
                     </div>
                 </div>
                 <div className='dropdown'>
-                    <DropDown title="Description" content={lodging.description}/>
-                    <DropDown title="Equipements" content={lodging.equipments}/>
+                    <DropDownV2 title="Description" content={lodging.description}/>
+                    <DropDownV2 title="Equipements" content={lodging.equipments}/>
                 </div>
             </article>
         </section>

@@ -1,0 +1,57 @@
+.dropdown-container {
+  margin: 1rem;
+  width: 100%;
+
+  .dropdown-button {
+      cursor: pointer;
+      background: #FF6060;
+      padding: 8px;
+      border-radius: 5px;
+      height: 2rem;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 1.2rem;
+      width: 100%;
+      border: none;
+    &::after {
+      content: url("../../assets/icons/arrow-up.svg");
+      transition: transform 0.2s ease-in-out;
+      -webkit-transition: transform 0.3s ease;
+      float: right;
+      margin-right: 5px;
+    }
+  }
+  .dropdown-content {
+      overflow: hidden;
+      background: #F6F6F6;
+      width: 100%;
+      position: relative;
+      border-radius: 0 0 5px 5px;
+      max-height: 0;
+      transition: max-height 0.3s ease-in-out;
+      .dropdown-content-child {
+        padding: 1rem;
+        padding-bottom: 0;
+        margin-bottom: 0;
+        position: relative;
+        display: flex;
+        top: -15px;
+        flex-direction: column;
+        span {
+          line-height: 1.5;
+        }
+      }
+  }
+  &.open {
+    .dropdown-button {
+      &::after {
+        transform: rotate(-180deg);
+      }
+    }
+    .dropdown-content {
+      max-height: 300px; 
+    }
+  }
+}

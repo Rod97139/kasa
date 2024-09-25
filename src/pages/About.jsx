@@ -1,4 +1,4 @@
-import DropDown from "../components/DropDown.jsx";
+import DropDownV2 from "../components/DropDownV2.jsx";
 import Banner from "../components/Banner.jsx";
 import "../styles/pages/about/About.scss";
 
@@ -34,7 +34,7 @@ const About = () => {
             <section>
                 <article className="dropdown-about-container">
             {dropdownData.map((dropdown, index) => (
-                <DropDown key={index} title={dropdown.title} content={dropdown.content} />
+                <DropDownV2 key={index} title={dropdown.title} content={dropdown.content} />
             ))}
                 </article>
             </section>
